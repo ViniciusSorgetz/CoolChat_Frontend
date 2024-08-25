@@ -1,0 +1,57 @@
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    padding-bottom: 5px;
+    overflow: auto;
+    margin: 5px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+.nav-item{
+    display: flex;
+    transition: 0.3s;
+}
+.user-info{
+    color: white;
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+    align-items: center;
+}
+.user-info button{
+    background-color: transparent;
+    border: none;
+    border: 3px solid transparent;
+    color: gray;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+.user-info button:hover{
+    cursor: pointer;
+    border: 3px solid #464646;
+}
+.navbar h2{
+    font-size: 1rem;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+.close-button{
+    margin-left: 10px;
+    margin-right: -10px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.create-account{
+    color: gray;
+}
+.create-account a{
+    text-decoration: none;
+    background: -webkit-linear-gradient(#FF7008, #9644FE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

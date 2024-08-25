@@ -1,0 +1,9 @@
+.password-container{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.password-container input:hover{
+    cursor: pointer;
+}
