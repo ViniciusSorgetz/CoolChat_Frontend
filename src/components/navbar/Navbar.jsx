@@ -50,7 +50,11 @@ const Navbar = () =>{
           <button onClick={logOut}>Sair</button>
         </div>}
         <ul>
-          <li className={!locate.pathname.includes("profile") && "nav-item"}>
+          <li className={
+            !locate.pathname.includes("profile") && 
+            !locate.pathname.includes("home") && 
+            !locate.pathname.includes("register") && 
+            "nav-item"}>
               <Link to={user ? "/profile" : "/home"}>
                 <div className="border"><div className="inside">
                   <h2>Home</h2>

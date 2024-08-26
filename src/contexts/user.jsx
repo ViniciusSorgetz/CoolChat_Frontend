@@ -13,7 +13,7 @@ const UserProvider = ({children}) => {
 
     useEffect(() => {
         checkToken();
-        const newSocket = io("http://localhost:9000");
+        const newSocket = io("https://coolchatapi-production.up.railway.app");
         newSocket.on("connect");
         setSocket(newSocket);
         //getSocket();
@@ -36,7 +36,6 @@ const UserProvider = ({children}) => {
     
     const getSocket = () => {
         if (socket) return;
-        console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAA SOCKET");
         const newSocket = io("http://localhost:9000");
         newSocket.on("connect");
         setSocket(newSocket);
