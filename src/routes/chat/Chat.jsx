@@ -69,7 +69,8 @@ const Chat = () => {
     e.preventDefault();
     const message = {
       nick: user.nick,
-      content: content
+      content: content,
+      postedAt: Date.now()
     }
     setMessages(prevMessages => [...prevMessages, message]);
     socket.emit("send-message", message, room.id);

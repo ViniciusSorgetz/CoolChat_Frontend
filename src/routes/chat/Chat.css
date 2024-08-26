@@ -14,6 +14,9 @@
     margin-top: 3px;
     text-wrap: wrap;
 }
+.message-content span{
+    word-break: break-word;
+}
 .message-user{
     font-size: 0.9rem;
 }

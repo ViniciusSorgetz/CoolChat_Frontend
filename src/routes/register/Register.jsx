@@ -6,11 +6,29 @@ import Dice from '../../assets/Dice.svg';
 import FormGroup from "../../components/form-group/FormGroup";
 import './Register.css';
 
-import { adjectives, animals } from "./Names";
-
-const nickInput = document.getElementById("nick");
-
 const Register = () =>{
+
+   const adjectives = [
+    "Lazy", "Angry", "Happy", "Sad", "Brave", "Clever", "Shy", "Friendly", 
+    "Grumpy", "Excited", "Calm", "Curious", "Jolly", "Gentle", "Fierce", "Clumsy", 
+    "Silly", "Sneaky", "Witty", "Bored", "Energetic", "Proud", "Nervous", "Confident", 
+    "Quiet", "Loud", "Serious", "Goofy", "Optimistic", "Pessimistic", "Loyal", 
+    "Stubborn", "Thoughtful", "Generous", "Rude", "Polite", "Bold", "Timid", 
+    "Fearless", "Cautious", "Ambitious", "Lazy", "Reliable", "Honest", "Creative", 
+    "Resourceful", "Charming", "Passionate", "Indecisive", "Persistent"
+  ];
+  
+   const animals = [
+    "Lion", "Tiger", "Elephant", "Giraffe", "Panda", "Koala", "Kangaroo", "Dolphin", 
+    "Shark", "Whale", "Octopus", "Penguin", "Eagle", "Hawk", "Wolf", "Bear", 
+    "Fox", "Rabbit", "Deer", "Moose", "Bison", "Rhino", "Hippo", "Cheetah", 
+    "Leopard", "Zebra", "Crocodile", "Alligator", "Snake", "Turtle", "Chameleon", 
+    "Frog", "Toad", "Bat", "Owl", "Parrot", "Flamingo", "Peacock", "Raccoon", 
+    "Skunk", "Otter", "Beaver", "Hedgehog", "Squirrel", "Chipmunk", "Antelope", 
+    "Buffalo", "Jaguar", "Lynx", "Cougar"
+  ];
+
+  const nickInput = document.getElementById("nick");
 
   const {user, setUser} = useContext(UserContext);
 
@@ -37,7 +55,7 @@ const Register = () =>{
       }
       setUser(newUser);
       localStorage.setItem("user", JSON.stringify(newUser));
-      navigate("/home/profile");
+      navigate("/profile");
     } 
     catch (error) {
       const thisError = await error.response.data.msg
@@ -46,6 +64,7 @@ const Register = () =>{
   }
 
   const generateNick = () => {
+    console.log("gerando nick...");
     const num1 = Math.floor(Math.random() * adjectives.length);
     const num2 = Math.floor(Math.random() * animals.length);
     const adjective = adjectives[num1];
