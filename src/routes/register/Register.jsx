@@ -69,11 +69,11 @@ const Register = () =>{
     const num2 = Math.floor(Math.random() * animals.length);
     const adjective = adjectives[num1];
     const animal = animals[num2];
-    nickInput.style.scale = "0.90";
-    nickInput.style.color = "gray";
+    document.getElementById("nick").style.scale = "0.90";
+    document.getElementById("nick").style.color = "gray";
     setTimeout(() => {
-      nickInput.style.scale = "1";
-      nickInput.style.color = "white";
+      document.getElementById("nick").style.scale = "1";
+      document.getElementById("nick").style.color = "white";
     }, 100);
     setNick(adjective + " " + animal);
   }
