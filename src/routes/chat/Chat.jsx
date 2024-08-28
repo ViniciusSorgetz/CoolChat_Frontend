@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { UserContext } from '../../contexts/user';
 import coolchat from '../../axios/config';
@@ -12,6 +12,7 @@ const Chat = () => {
   const [room, setRoom] = useState("");
   const [content, setContent] = useState("");
   const [index, setIndex] = useState(null);
+  const messagesEndRef = useRef(null);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -47,6 +48,10 @@ const Chat = () => {
       setMessages(prevMessages => [...prevMessages, message]);
     });
   }, [socket]);
+
+  useEffect(() => {
+    if (messagesEndRef.current) messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const getMessages = async (index) => {
     const { id, password, type } = chats[index];
@@ -130,6 +135,7 @@ const Chat = () => {
               </>)}
             </li>
           ))}
+          <li ref={messagesEndRef}></li>
         </ul>
         <form onSubmit={sendMessage}>
           <div className="border">
