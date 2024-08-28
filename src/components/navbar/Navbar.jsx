@@ -52,10 +52,10 @@ const Navbar = () =>{
         <ul>
           <li className={
             !locate.pathname.includes("profile") && 
-            !locate.pathname.includes("home") && 
+            locate.pathname.length > 1 && 
             !locate.pathname.includes("register") && 
             "nav-item"}>
-              <Link to={user ? "/profile" : "/home"}>
+              <Link to={user ? "/profile" : "/"}>
                 <div className="border"><div className="inside">
                   <h2>Home</h2>
                 </div></div>

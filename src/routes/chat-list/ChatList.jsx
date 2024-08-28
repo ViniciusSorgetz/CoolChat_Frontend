@@ -65,7 +65,7 @@ const ChatList = () => {
       }
       <div className="title-container">
         <h2 className="title">CONVERSAS COOL</h2>
-        <Link to={user ? "/create-chat" : "/home"}>
+        <Link to={user ? "/create-chat" : "/"}>
           <img 
             src={Create} 
             alt="Create chat"

@@ -18,7 +18,7 @@ const Chat = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if(!user) navigate("/home");
+    if(!user) navigate("/");
   }, []);
 
   useEffect(() => {
