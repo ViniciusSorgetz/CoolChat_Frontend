@@ -72,6 +72,8 @@ const Chat = () => {
 
   const sendMessage = async (e) =>{
     e.preventDefault();
+    if(content.length === 0) return;
+    if(content.trim().length === 0) return;
     const message = {
       nick: user.nick,
       content: content,
@@ -98,6 +100,7 @@ const Chat = () => {
         'Authorization': `Bearer ${user.token}`
       }
     });
+    setContent("");
   }
 
   const getDate = (messageDate) => {
