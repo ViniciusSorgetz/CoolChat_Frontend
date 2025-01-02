@@ -1,8 +1,18 @@
-# React + Vite
+# CoolChat Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Frontend de um site com bate-papo
 
-Currently, two official plugins are available:
+Projeto feito para um trabalho escolar, onde o objetivo era contruir uma aplicação com um chat.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Confira o site: [CoolChat](https://cooolchat.netlify.app/) (expira em 17/01/2025)
+
+### Principais Funcionalidades
+- Sistema de Login
+- Criação de salas tanto públicas quanto privadas
+- Envio de mensagens em tempo real
+
+### Principais Tecnologias
+- JavaScript
+- React
+- Bootstrap
+- Socket_io_client
